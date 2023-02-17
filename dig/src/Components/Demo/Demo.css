@@ -1,0 +1,45 @@
+.video{
+    width:300px;
+}
+
+.typingText{
+   
+    font-weight: 800;
+    font-size: 50px;
+       
+}
+@media screen and (max-width: 1024px){
+   
+    .typingText{
+        font-family: 'Nova Oval', cursive;
+        font-weight: 800;
+        font-size: 40px;
+           
+    }
+    .video{
+        width:300px;
+    }
+
+
+
+  
+    
+}
+   
+  
+   
+@media screen and (min-width:350px) and (max-width: 800px){
+      
+
+    .typingText{
+        font-family: 'Nova Oval', cursive;
+        font-weight: 800;
+        font-size: 30px;
+           
+    }
+    .video{
+        width:300px;
+    }
+
+
+}

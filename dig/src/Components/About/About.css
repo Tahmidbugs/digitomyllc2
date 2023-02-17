@@ -1,0 +1,187 @@
+.about__me-image{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform:rotate(10deg);
+    transition: transform 1s ease;
+}
+.about__me{
+    
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background-color: #a6a6a6;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+    place-items: center;
+    margin:auto;
+    padding:auto;
+    margin-bottom: 60px;
+}
+.about__me-image:hover{
+    transform:rotate(0deg);
+
+}
+.trapmosquito{
+  width:20%;
+  position: absolute;
+  top:80px;
+}
+
+.pfpi{
+  width:360px;
+}
+img{
+  cursor: url("https://www.freeiconspng.com/thumbs/cursor-png/hand-cursor-png-click-cursor-hand-icon-13.png"), auto;
+}
+.title{
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: rgb(41, 41, 90);
+   
+    transition: color 10s ease-in-out;
+    animation: color-change 10s ease-in-out infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(37, 37, 83);
+  }
+  25% {
+    color: rgb(73, 72, 129);
+  }
+  50% {
+    color: rgb(23, 81, 18);
+  }
+  75% {
+    color: rgb(30, 87, 92);
+  }
+  100% {
+    color: rgb(37, 37, 83);
+  }
+}
+
+.info{
+   
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.listhover{
+  background-color: rgb(119, 119, 119);
+  padding:10px;
+  border-radius: 20px;
+  margin:10px;
+}
+.listhover:hover{
+  background-color: #464646;
+}
+.listhover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.listhover a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+.listhover a span {
+  display: none;
+  color:#b2b5b6;
+  font-weight: 700;
+}
+
+
+.listhover:hover a span {
+  display: inline-block;
+  margin-left: 5px;
+  
+}
+
+.listhover:hover div {
+  color:#b2b5b6;
+  
+}
+
+
+
+@media screen and (max-width: 1024px){
+  .title {
+    font-size: 3.5rem;
+  }
+  .pfpi {
+    width: 250px;
+  }
+  .trapmosquito {
+    width: 200px;
+    top:150px;
+  }
+
+  
+}
+ 
+
+ 
+ @media screen and (min-width:350px) and (max-width: 800px){
+    
+     
+  .title {
+    font-size: 2.5rem;
+  }
+  .pfpi {
+    width: 220px;
+    /* margin-top: 100px; */
+  }
+  .trapmosquito {
+    width: 250px;
+    top:120px;
+    
+
+  }
+  .title{
+    margin-top: 100px;
+    font-family: 'Nova Oval', cursive;
+    font-weight: 800;
+    font-size: 3rem;
+    color: rgb(41, 41, 90);
+   
+    transition: color 10s ease-in-out;
+    animation: color-change 10s ease-in-out infinite;
+}
+.about__me-image{
+  border-radius: 2rem;
+  overflow: hidden;
+  transform:rotate(10deg);
+  transition: transform 1s ease;
+}
+.about__me{
+  
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background-color: #a6a6a6;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+  place-items: center;
+  margin:auto;
+  padding:auto;
+  align-self: start;
+}
+
+
+ }
+  
+  
+
+
+
+  
+   
+    
+    
+    
+    
