@@ -2,47 +2,65 @@ import React from "react";
 
 import "./Demo.css";
 const Demo = () => {
-  const toRotate = [
-    { text: "Malaria", color: "#5757D4" },
-    { text: "Mosquitoes", color: "#0D6A8F" },
-    { text: "Chikungunya", color: "#A4429B" },
-    { text: "Algorithms", color: "#E78C19" },
-    { text: "Public-Health", color: "#5747AF" },
-    { text: "Zika", color: "#428157" },
-    { text: "AI", color: "#3F5681" },
-    { text: "Culex", color: "#9C4A87" },
-    { text: "stephensi", color: "#15927D" },
-    { text: "Smart-trap", color: "#68873A" },
-    { text: "Automation", color: "#0D6A8F" },
-    { text: "Dengue", color: "#763829" },
-    { text: "Larva", color: "#5747AF" },
-    { text: "Aedes", color: "#DD9308" },
-    { text: "Computer-Vision", color: "#0B7E44" },
-  ];
-  const toRotate3 = [];
+  const [toRotate, setToRotate] = React.useState([
+    { text: "malaria", color: "#5757D4", italize: false },
+    { text: "chikungunya", color: "#A4429B", italize: false },
+    { text: "Public-Health", color: "#5747AF", italize: false },
+    { text: "Zika", color: "#428157", italize: false },
+    { text: "AI", color: "#3F5681", italize: false },
+    { text: "cloud", color: "#3F5681", italize: false },
+    { text: "Culex", color: "#6B1C4F", italize: true },
+    { text: "Anopheles", color: "#E7830B", italize: true },
+    { text: "stephensi", color: "#15927D", italize: true },
+    { text: "Smart-trap", color: "#68873A", italize: false },
+    { text: "nigripalpus", color: "#0D6A8F", italize: true },
+    { text: "image-processing", color: "#503C59", italize: false },
+    { text: "dengue", color: "#763829", italize: false },
+    { text: "Aedes", color: "#DD9308", italize: true },
+    { text: "computer-vision", color: "#E6C86A", italize: false },
+    { text: "aegypti", color: "#0B7E44", italize: true },
+  ]);
+  const [toRotate3, setToRotate3] = React.useState([]);
   for (let i = 0; i < toRotate.length; i += 6) {
     toRotate3.push(toRotate.slice(i, i + 6));
   }
   const [loopNum, setLoopNum] = React.useState(0);
   const [isDeleting, setIsDeleting] = React.useState(false);
   const [hover, setHover] = React.useState(false);
-  const [text, setText] = React.useState({ text: "", color: "" });
+  const [text, setText] = React.useState({
+    text: "",
+    color: "",
+    italize: false,
+  });
   const [delta, setDelta] = React.useState(50);
+  const shuffleToRotate = () => {
+    const shuffled = toRotate.sort(() => Math.random() - 0.5);
+    console.log("meow");
+    const shuffledChunks = [];
+    for (let i = 0; i < shuffled.length; i += 6) {
+      shuffledChunks.push(shuffled.slice(i, i + 6));
+    }
+    setToRotate3(shuffledChunks);
+    setLoopNum(0);
+    setIsDeleting(false);
+  };
 
   React.useEffect(() => {
     let ticker = setInterval(() => {
-      let i = loopNum % toRotate3.length;
-      let fullText = toRotate3[i].map((r) => r.text).join(" ");
+      let i = loopNum % toRotate.length;
+      let fullText = toRotate.map((r) => r.text).join(" ");
 
       if (isDeleting) {
         setText({
           text: fullText.substring(0, text.text.length - 1),
           color: text.color,
+          italize: text.italize,
         });
       } else {
         setText({
           text: fullText.substring(0, text.text.length + 1),
-          color: toRotate3[i][0].color,
+          color: toRotate[0].color,
+          italize: toRotate[0].italize,
         });
       }
 
@@ -51,6 +69,7 @@ const Demo = () => {
       if (isDeleting && text.text === "") {
         setIsDeleting(false);
         setLoopNum(i + 1);
+        shuffleToRotate();
       } else if (!isDeleting && text.text === fullText) {
         setIsDeleting(true);
         setDelta(1000);
@@ -59,12 +78,15 @@ const Demo = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [loopNum, isDeleting, text, delta, toRotate3]);
+  }, [loopNum, isDeleting, delta, toRotate]);
 
   return (
     <>
       <div style={{ marginTop: 150 }} id="demo">
-        <h5 style={{ fontSize: 14, fontWeight: 800 }} className="title">
+        <h5
+          style={{ fontSize: 14, fontWeight: 800 }}
+          className="title changecolor"
+        >
           Demo
         </h5>
         <div
@@ -90,7 +112,15 @@ const Demo = () => {
               <h1 className="typingText">
                 {text.text.split(" ").map((word, index) => {
                   return (
-                    <span key={index} style={{ color: toRotate[index].color }}>
+                    <span
+                      key={index}
+                      style={{
+                        color: toRotate[index].color,
+                        fontStyle: toRotate[index].italize
+                          ? "italic"
+                          : "normal",
+                      }}
+                    >
                       {word}{" "}
                     </span>
                   );
@@ -126,7 +156,7 @@ const Demo = () => {
               style={{
                 borderRadius: 30,
                 width: "70%",
-                transform: hover ? "scale(1.1)" : "scale(1)",
+                transform: hover ? "scale(1.4)" : "scale(1)",
                 transition: "transform 0.3s ease-in-out",
               }}
               controls

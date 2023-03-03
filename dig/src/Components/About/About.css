@@ -1,24 +1,55 @@
 .about__me-image{
     border-radius: 2rem;
     overflow: hidden;
-    transform:rotate(10deg);
+    /* transform:rotate(10deg); */
     transition: transform 1s ease;
+    position:relative;
+    width: 500px;
+  
+    /* padding-top:50px;
+    padding-bottom: 50px; */
+    /* top:-20px; */
+    
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 .about__me{
     
     aspect-ratio: 1/1;
     border-radius: 2rem;
-    background-color: #a6a6a6;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+    /* background-color: #DDD9D9;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png"); */
     place-items: center;
     margin:auto;
     padding:auto;
     margin-bottom: 60px;
+    position: relative;
 }
 .about__me-image:hover{
     transform:rotate(0deg);
 
 }
+.about__me-swiper {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+}
+
+
 .trapmosquito{
   width:20%;
   position: absolute;
@@ -26,7 +57,9 @@
 }
 
 .pfpi{
-  width:360px;
+  width:350px;
+  height: 450px;
+  overflow: visible;
 }
 img{
   cursor: url("https://www.freeiconspng.com/thumbs/cursor-png/hand-cursor-png-click-cursor-hand-icon-13.png"), auto;
@@ -35,9 +68,12 @@ img{
     font-weight: 800;
     font-size: 3.5rem;
     color: rgb(41, 41, 90);
-   
-    transition: color 10s ease-in-out;
-    animation: color-change 10s ease-in-out infinite;
+    font-family: 'Righteous', cursive;
+    
+}
+.changecolor{
+  transition: color 3s ease-in-out;
+    animation: color-change 3s ease-in-out infinite;
 }
 
 @keyframes color-change {
@@ -57,9 +93,15 @@ img{
     color: rgb(37, 37, 83);
   }
 }
+.container.clubs__container{
+    width: 20%;
+    height:50%;
+    /* overflow-y: visible; */
+}
 
 .info{
-   
+  font-family: 'Righteous', cursive;
+
     font-size: 20px;
     font-weight: 500;
     
@@ -164,7 +206,7 @@ a{
   
   aspect-ratio: 1/1;
   border-radius: 2rem;
-  background-color: #a6a6a6;
+  background-color: #DDD9D9;
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
   place-items: center;
   margin:auto;
@@ -174,6 +216,55 @@ a{
 
 
  }
+
+ .glow-on-hover {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 24px;
+  border: 2px solid rgb(92,138,174);
+  border-radius: 50px;
+  transition: all 0.3s ease-out;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: rgb(92,138,174);
+}
+
+.glow-on-hover:hover {
+  background-color:rgb(92,138,174);
+  color: #04a5ff;
+}
+
+.glow-on-hover:focus {
+  outline: none;
+  box-shadow: 0 0 10px #04a5ff;
+}
+
+/* Futuristic style */
+.glow-on-hover {
+  position: relative;
+  /* z-index: 9; */
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1)
+  );
+  background-size: 400%;
+}
+
+.glow-on-hover:hover {
+  color: #272727;
+  background-position: 100%;
+}
+
+.glow-on-hover:focus {
+  color: #fff;
+  background-position: 100%;
+}
+
   
   
 

@@ -23,7 +23,10 @@ const Patents = () => {
     <>
       <div style={{ marginTop: 150, marginBottom: 80 }}>
         <div style={{ textAlign: "center" }}>
-          <h5 style={{ fontSize: 14, fontWeight: 800 }} className="title">
+          <h5
+            style={{ fontSize: 14, fontWeight: 800 }}
+            className="title changecolor"
+          >
             Patented Creations
           </h5>
           <br />
@@ -73,7 +76,7 @@ const Card = ({ title, description, index }) => {
   return (
     <div
       style={{
-        backgroundColor: hover ? "#464646" : "#DCDBDC",
+        backgroundColor: hover ? "#5A88AC" : "#DCDBDC",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -91,7 +94,7 @@ const Card = ({ title, description, index }) => {
     >
       <div
         style={{
-          backgroundColor: hover ? "#777777" : "black",
+          backgroundColor: hover ? "black" : "black",
           width: "70px",
           height: "70px",
           display: "flex",
@@ -108,7 +111,7 @@ const Card = ({ title, description, index }) => {
       </div>
       <h5
         style={{
-          color: hover ? "#C9C9C9" : "black",
+          color: hover ? "black" : "black",
           fontWeight: "700",
           transition: "all 0.3s ease-in-out",
           transform: hover ? "translateY(-10px)" : "translateY(0)",
@@ -118,7 +121,7 @@ const Card = ({ title, description, index }) => {
       </h5>
       <p
         style={{
-          color: hover ? "#C9C9C9" : "black",
+          color: hover ? "black" : "black",
           fontWeight: "500",
           fontSize: 15,
           paddingRight: 20,

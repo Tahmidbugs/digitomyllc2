@@ -62,7 +62,9 @@
 
 
   li:hover{
-    background-color: rgb(131, 131, 131);
+    background-color:rgb(92,138,174);
+    border-radius: 20px;
+    padding:10;
   }
 
   

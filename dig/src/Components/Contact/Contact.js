@@ -18,7 +18,10 @@ const Contact = () => {
 
   return (
     <section id="contact" style={{ marginTop: 150 }}>
-      <h5 style={{ textAlign: "center", fontSize: 15 }} className="title">
+      <h5
+        style={{ textAlign: "center", fontSize: 15 }}
+        className="title changecolor"
+      >
         Get in touch
       </h5>
       <div

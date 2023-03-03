@@ -5,7 +5,7 @@
 .typingText{
    
     font-weight: 800;
-    font-size: 50px;
+    font-size: 40px;
        
 }
 @media screen and (max-width: 1024px){
@@ -13,7 +13,7 @@
     .typingText{
         font-family: 'Nova Oval', cursive;
         font-weight: 800;
-        font-size: 40px;
+        font-size: 30px;
            
     }
     .video{
