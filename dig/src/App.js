@@ -19,6 +19,7 @@ import ChatBot from "../src/Components/Chatbot/Chatbot";
 
 function App() {
   const [isChatOpen, setIsChatOpen] = React.useState(false);
+  const [isThemeSelectorOpen, setIsThemeSelectorOpen] = React.useState(false);
   return (
     <div className="App">
       <AnimatedCursor
@@ -55,7 +56,7 @@ function App() {
       <Contact />
       <Footer />
       {settingsdata && (
-        <a>
+        <a onClick={() => setIsThemeSelectorOpen(true)}>
           <div
             style={{
               width: "4%",
@@ -65,8 +66,11 @@ function App() {
               backgroundColor: "#DDD9D9",
               borderRadius: "50%",
               padding: 10,
+              zIndex: 1,
             }}
-            // onClick={() => setThemeSettingsOpen(true)}
+            onMouseEnter={() =>
+              setIsThemeSelectorOpen((prevState) => !prevState)
+            }
           >
             <Lottie
               options={{ animationData: settingsdata }}
@@ -74,6 +78,68 @@ function App() {
             />
           </div>
         </a>
+      )}
+      {isThemeSelectorOpen && (
+        <div
+          style={{
+            height: 220,
+            width: 50,
+            backgroundColor: "#C3E0F6",
+            position: "fixed",
+            bottom: 100,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            left: 30,
+            zIndex: 0,
+          }}
+          onMouseLeave={() => setIsThemeSelectorOpen(false)}
+        >
+          <div
+            style={{
+              backgroundColor: "black",
+              height: 20,
+              width: 20,
+              padding: "auto",
+              margin: "auto",
+              marginBottom: 20,
+              marginTop: 40,
+              borderRadius: "50%",
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundColor: "#5C8AAE",
+              height: 20,
+              width: 20,
+              padding: "auto",
+              margin: "auto",
+              marginBottom: 20,
+              borderRadius: "50%",
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundColor: "purple",
+              height: 20,
+              width: 20,
+              padding: "auto",
+              margin: "auto",
+              marginBottom: 20,
+              borderRadius: "50%",
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundColor: "white",
+              height: 20,
+              width: 20,
+              padding: "auto",
+              margin: "auto",
+              marginBottom: 20,
+              borderRadius: "50%",
+            }}
+          ></div>
+        </div>
       )}
       {animationDatas && (
         <a>

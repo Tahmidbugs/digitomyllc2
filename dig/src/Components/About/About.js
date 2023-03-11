@@ -49,6 +49,8 @@ const About = () => {
             they may carry. Join us in our mission to create a healthier, safer
             world through technology.
           </h3>
+          <br />
+          <br />
           <Button />
         </div>
 
