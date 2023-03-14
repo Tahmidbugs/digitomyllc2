@@ -1,5 +1,7 @@
 {
   "scripts": {
-    "build": "cd dig && npm install && npm run build"
+    "build": "cd client && npm install && npm run build",
+    "predeploy": "npm run build"
+  
   }
 }
