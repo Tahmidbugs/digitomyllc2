@@ -20,66 +20,91 @@ const About = () => {
         }}
         className="bodyPart"
       >
-        <div style={{ width: "40%", margin: "auto", textAlign: "center" }}>
+        <div
+          style={{
+            width: "60%",
+            margin: "auto",
+            textAlign: "center",
+          }}
+        >
           {/* <img
             src={MySVG}
             alt="My GIF"
             style={{ width: "25%", height: "45%", position: "absolute" }}
           /> */}
-          <h1 className="title changecolor ">Digitomy, LLC </h1>
-
-          <h3
-            className="info fadeIn"
-            style={{ marginTop: 30, textAlign: "left" }}
+          <video
+            style={{
+              // borderRadius: 30,
+              objectFit: "cover",
+              width: "900px",
+              height: "300px",
+              // transform: hover ? "scale(1.4)" : "scale(1)",
+              transition: "transform 0.3s ease-in-out",
+              opacity: 1,
+              position: "relative",
+              borderRadius: 20,
+              borderTopLeftRadius: 70,
+              borderTopRightRadius: 70,
+            }}
+            // controls
+            autoPlay
+            alt=""
+            className=" fadeIn video"
+            loop
+            controls={false}
+            muted
           >
-            At Digitomy, we believe in the power of innovation to revolutionize
-            the way we approach mosquito surveillance. Based at the University
-            of South Florida, our team is dedicated to developing cutting-edge
-            technology to automate the surveillance of mosquito vectors at both
-            the adult and larval stages.
-          </h3>
-
-          <h3
-            className="info fadeIn"
-            style={{ marginTop: 30, textAlign: "left" }}
+            <source
+              src={require("../../assets/machine.mov")}
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <h1
+            className="title changecolor "
+            style={{
+              position: "absolute",
+              bottom: 140,
+              left: 50,
+              textAlign: "left",
+            }}
           >
-            Our patented algorithms and smart mosquito trap are designed to
-            provide unparalleled accuracy and efficiency in monitoring the
-            presence of mosquitoes, helping to prevent the spread of diseases
-            they may carry. Join us in our mission to create a healthier, safer
-            world through technology.
-          </h3>
+            Embrace the <br />
+            future of mosquito surveillance <br />
+            with Digitomy{" "}
+          </h1>
+
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <Button />
         </div>
-
         <div className="about__me">
           <div className="about__me-image">
-            <video
-              style={{
-                // borderRadius: 30,
-                objectFit: "cover",
-                width: "500px",
-                height: "600px",
-                // transform: hover ? "scale(1.4)" : "scale(1)",
-                transition: "transform 0.3s ease-in-out",
-                opacity: 1,
-              }}
-              // controls
-              autoPlay
-              alt=""
-              className=" fadeIn video"
-              loop
-              controls={false}
-              muted
+            <h3
+              className="info fadeIn"
+              style={{ marginTop: 90, textAlign: "left" }}
             >
-              <source
-                src={require("../../assets/machine.mov")}
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+              At Digitomy, we believe in the power of innovation to
+              revolutionize the way we approach mosquito surveillance. Based at
+              the University of South Florida, our team is dedicated to
+              developing cutting-edge technology to automate the surveillance of
+              mosquito vectors at both the adult and larval stages.
+            </h3>
+
+            <h3
+              className="info fadeIn"
+              style={{ marginTop: 30, textAlign: "left" }}
+            >
+              Our patented algorithms and smart mosquito trap are designed to
+              provide unparalleled accuracy and efficiency in monitoring the
+              presence of mosquitoes, helping to prevent the spread of diseases
+              they may carry. Join us in our mission to create a healthier,
+              safer world through technology.
+            </h3>
           </div>
         </div>
       </div>
