@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -40,22 +41,28 @@ const Navbar = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a
+                <Link
+                  to="demo"
+                  smooth={true}
+                  duration={500}
+                  offset={-250}
+                  style={{ textDecoration: "none" }}
                   class="nav-link menuitem changecolor"
-                  href="#demo"
-                  style={{ color: "black" }}
                 >
                   Demo
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a
+                <Link
+                  to="team"
+                  smooth={true}
+                  duration={500}
+                  offset={-200}
+                  style={{ textDecoration: "none" }}
                   class="nav-link menuitem changecolor"
-                  href="#"
-                  style={{ color: "black" }}
                 >
                   Team
-                </a>
+                </Link>
               </li>
 
               {/* <li class="nav-item dropdown">
@@ -120,31 +127,40 @@ const Navbar = () => {
           >
             <ul class="navbar-nav changecolor">
               <li class="nav-item">
-                <a
+                <Link
+                  to="sponsors"
+                  smooth={true}
+                  duration={500}
+                  offset={-200}
+                  style={{ textDecoration: "none" }}
                   class="nav-link menuitem changecolor"
-                  href="#"
-                  style={{ color: "black" }}
                 >
                   Sponsors
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a
+                <Link
+                  to="patents"
+                  smooth={true}
+                  duration={500}
+                  offset={-200}
+                  style={{ textDecoration: "none" }}
                   class="nav-link menuitem changecolor"
-                  href="#"
-                  style={{ color: "black" }}
                 >
                   Patents
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  offset={-200}
+                  style={{ textDecoration: "none" }}
                   class="nav-link menuitem changecolor"
-                  href="#"
-                  style={{ color: "black" }}
                 >
                   Contacts
-                </a>
+                </Link>
               </li>
 
               {/* <li class="nav-item dropdown">

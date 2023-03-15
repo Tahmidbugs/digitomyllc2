@@ -21,7 +21,7 @@ const Patents = () => {
   ];
   return (
     <>
-      <div style={{ marginTop: 150, marginBottom: 80 }}>
+      <div style={{ marginTop: 150, marginBottom: 80 }} id="patents">
         <div style={{ textAlign: "center" }}>
           <h5
             style={{ fontSize: 14, fontWeight: 800 }}

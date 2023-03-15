@@ -3,6 +3,7 @@ import "./About.css";
 import Machine from "../../assets/machine.png";
 import Machine2 from "../../assets/machine2.jpeg";
 import MySVG from "./my.gif";
+import { Link, animateScroll } from "react-scroll";
 
 const About = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -113,18 +114,17 @@ const About = () => {
 };
 
 const Button = () => {
-  const handleClick = () => {
-    const demoSection = document.getElementById("demo");
-    const yOffset = -250; // adjust this value to change how far down to scroll
-    const y =
-      demoSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
   return (
-    <a href="#demo" className="glow-on-hover bounce" onClick={handleClick}>
+    <Link
+      to="demo"
+      smooth={true}
+      duration={500}
+      offset={-250}
+      style={{ textDecoration: "none" }}
+      className="glow-on-hover bounce"
+    >
       Check Demo
-    </a>
+    </Link>
   );
 };
 

@@ -104,9 +104,10 @@ const Team = () => {
         marginTop: 150,
         marginBottom: 100,
       }}
+      id="team"
     >
       <h5
-        style={{ textAlign: "center", marginBottom: 80, fontSize: 14 }}
+        style={{ textAlign: "center", marginBottom: 50, fontSize: 14 }}
         className="title changecolor"
       >
         Meet our team
@@ -146,7 +147,7 @@ const Card = ({
   return (
     <div
       style={{
-        backgroundColor: hover ? "#C3E0F6" : "#DCDBDC",
+        backgroundColor: hover ? "#C3E0F6" : "#F4F4F4",
         width: "20%",
         display: "flex",
         flexDirection: "column",
@@ -168,7 +169,7 @@ const Card = ({
       <div style={{ height: "33%", marginBottom: 30 }}>
         <div
           style={{
-            backgroundColor: "#5A89AD",
+            backgroundColor: "#374E61",
             paddingTop: 20,
             borderBottomLeftRadius: "40%",
             borderBottomRightRadius: "40%",
@@ -184,11 +185,12 @@ const Card = ({
             style={{
               width: "90px",
               height: "90px",
-
               borderRadius: "50%",
               borderBottomLeftRadius: "40%",
               borderBottomRightRadius: "40%",
               marginBottom: "0px",
+              transition: "transform 0.2s ease-in-out",
+              transform: hover ? "scale(1.1)" : "scale(1)",
             }}
           />
         </div>

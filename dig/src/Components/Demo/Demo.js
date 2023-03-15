@@ -82,7 +82,7 @@ const Demo = () => {
 
   return (
     <>
-      <div style={{ marginTop: 150 }} id="demo">
+      <div style={{ marginTop: 150, height: "400px" }} id="demo">
         <h5
           style={{ fontSize: 14, fontWeight: 800 }}
           className="title changecolor"

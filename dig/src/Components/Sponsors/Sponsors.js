@@ -19,7 +19,7 @@ const Sponsors = () => {
   const [contribution, setContribution] = React.useState(defaultcont);
   return (
     <>
-      <div style={{ marginTop: 190, marginBottom: 80 }}>
+      <div style={{ marginTop: 190, marginBottom: 80 }} id="sponsors">
         <div style={{ textAlign: "center" }}>
           <h5
             style={{ fontSize: 15, fontWeight: "700" }}
