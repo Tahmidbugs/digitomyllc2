@@ -11,7 +11,7 @@
   }
   
   .chat-header {
-    background-color: #5B89AD;
+    background-color: #0e415a;
     padding: 20px;
     display: flex;
     color:rgb(0, 0, 0);
@@ -21,9 +21,10 @@
     border-top-right-radius: 10px;
   }
   
-  .chat-header h3 {
+  .chat-header h5 {
     margin: 0;
     font-weight: bold;
+    color: white;
   }
   
   .close-icon {
@@ -38,7 +39,7 @@
   }
   .chat-body::-webkit-scrollbar {
   width: 10px;
-  background-color:#5B89AD;
+  background-color:#0e415a;
 }
   
   .bot-message {
@@ -50,17 +51,19 @@
     font-size: 15px;
     margin: 10px;
     align-self: flex-start;
+    text-align: left;
   }
   
   .user-message{
-    background-color: #0e415a;
+    background-color: #2d5b71;
     padding: 10px;
     border-radius: 10px;
     max-width: 80%;
     color:rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 15px;
     margin: 10px;
-  
+    align-self: flex-end;
+    text-align: right;
     margin-left: auto;
   }
   .glow {
@@ -80,7 +83,7 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #5B89AD;
+    background-color: #0e415a;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }

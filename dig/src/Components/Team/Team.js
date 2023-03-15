@@ -1,12 +1,27 @@
 import React from "react";
+import ryanb from "../../assets/ryanb.png";
 import ryan from "../../assets/ryan.png";
+
+import sriramb from "../../assets/sriramb.png";
 import sriram from "../../assets/sriram.png";
+
+import brandonb from "../../assets/brandonb.png";
 import brandon from "../../assets/brandon.png";
+
+import abrorb from "../../assets/abrorb.png";
 import abror from "../../assets/abror.png";
+
+import tanvirb from "../../assets/tanvirb.png";
 import tanvir from "../../assets/tanvir.png";
+
 import farhat from "../../assets/farhat.png";
+import farhatb from "../../assets/farhatb.png";
+
 import otabek from "../../assets/otabek.png";
+import otabekb from "../../assets/otabekb.png";
+
 import tahmid from "../../assets/tahmid.jpeg";
+import tahmidb from "../../assets/tahmidb.jpeg";
 
 const Team = () => {
   const members = [
@@ -16,6 +31,7 @@ const Team = () => {
       positionDescription:
         "Professor in the Department of Computer Science and Engineering at University of South Florida.",
       profilePicture: sriram,
+      profilePicture2: sriramb,
       portfolio: "https://www.linkedin.com/in/sriram-chellappan-20bb8051/",
     },
     {
@@ -24,6 +40,7 @@ const Team = () => {
       positionDescription:
         "Assistant Professor of Digital Science at the University of South Florida.",
       profilePicture: ryan,
+      profilePicture2: ryanb,
       portfolio: "https://www.linkedin.com/in/ryancarney/",
     },
     {
@@ -32,6 +49,7 @@ const Team = () => {
       positionDescription:
         "Hardware Design Engineer and a USF Alum. He is currently pursuing a graduate degree from Georgia-Tech.",
       profilePicture: brandon,
+      profilePicture2: brandonb,
       portfolio: "https://www.linkedin.com/in/brandonmwolfram/",
     },
     {
@@ -40,6 +58,7 @@ const Team = () => {
       positionDescription:
         "Studying in the Department of Computer Science and Engineering at University of South Florida.",
       profilePicture: abror,
+      profilePicture2: abrorb,
       portfolio: "https://www.linkedin.com/in/abror-khaytbaev/",
     },
     {
@@ -48,6 +67,7 @@ const Team = () => {
       positionDescription:
         "Studying in the Department of Computer Science and Engineering at University of South Florida.",
       profilePicture: tanvir,
+      profilePicture2: tanvirb,
       portfolio: "https://www.linkedin.com/in/tanvirrazin/",
     },
     {
@@ -56,6 +76,7 @@ const Team = () => {
       positionDescription:
         "Studying in the Department of Computer Science and Engineering at University of South Florida.",
       profilePicture: farhat,
+      profilePicture2: farhatb,
       portfolio: "https://www.linkedin.com/in/farhat-binte-azam-4415a9144/",
     },
     {
@@ -64,6 +85,7 @@ const Team = () => {
       positionDescription:
         "Studying in the Department of Computer Science and Engineering at University of South Florida.",
       profilePicture: otabek,
+      profilePicture2: otabekb,
       portfolio: "https://www.linkedin.com/in/abduraufov/",
     },
     {
@@ -72,6 +94,7 @@ const Team = () => {
       positionDescription:
         "Studying in the Department of Computer Science and Engineering at University of South Florida.",
       profilePicture: tahmid,
+      profilePicture2: tahmidb,
       portfolio: "https://www.linkedin.com/in/tahmid-ahmed-72a883212/",
     },
   ];
@@ -100,6 +123,7 @@ const Team = () => {
             profilePicture={member.profilePicture}
             index={index}
             portfolio={member.portfolio}
+            profilePicture2={member.profilePicture2}
           />
         ))}
       </div>
@@ -113,6 +137,7 @@ const Card = ({
   position,
   positionDescription,
   profilePicture,
+  profilePicture2,
   index,
   portfolio,
 }) => {
@@ -154,7 +179,7 @@ const Card = ({
           }}
         >
           <img
-            src={profilePicture}
+            src={hover ? profilePicture : profilePicture2}
             alt={name}
             style={{
               width: "90px",

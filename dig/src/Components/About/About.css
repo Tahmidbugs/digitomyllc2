@@ -78,19 +78,19 @@ img{
 
 @keyframes color-change {
   0% {
-    color: rgb(37, 37, 83);
+    color: rgb(200, 152, 245);
   }
   25% {
-    color: rgb(73, 72, 129);
+    color: rgb(186, 115, 236);
   }
   50% {
-    color: rgb(23, 81, 18);
+    color: rgb(119, 164, 241);
   }
   75% {
-    color: rgb(30, 87, 92);
+    color: rgb(102, 159, 228);
   }
   100% {
-    color: rgb(37, 37, 83);
+    color: rgb(166, 166, 249);
   }
 }
 .container.clubs__container{
