@@ -1,12 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/server
+**/node_modules/
 /.pnp
 .pnp.js
-*.json
-
+# *.json
+digitomy-whmf-a7716372c5b3.json
 # testing
 /coverage
 
