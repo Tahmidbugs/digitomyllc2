@@ -18,10 +18,13 @@ const ChatBot = ({ setIsChatOpen, isChatOpen }) => {
   console.log(messages);
   async function handleSubmit() {
     try {
-      const response = await axios.post("http://localhost:8800/detectIntent", {
-        userInput: message,
-        languageCode: "en-US",
-      });
+      const response = await axios.post(
+        "https://digitomy.onrender.com/detectIntent",
+        {
+          userInput: message,
+          languageCode: "en-US",
+        }
+      );
 
       setMessages([
         ...messages,
