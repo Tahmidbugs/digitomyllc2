@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import { BiPaperPlane } from "react-icons/bi";
 import "./chatbot.css";
@@ -8,15 +8,24 @@ const ChatBot = ({ setIsChatOpen, isChatOpen }) => {
   const [messages, setMessages] = React.useState([
     { message: "Hello! How may I be of service?", sender: "bot" },
   ]);
-
+  const [isTyping, setIsTyping] = React.useState(false);
+  const messageContainerRef = useRef(null);
   const handleMessage = (event) => {
     setMessage(event.target.value);
-    if (event.key === "Enter") {
-      handleSubmit();
-    }
   };
-  console.log(messages);
+  React.useEffect(() => {
+    if (messageContainerRef.current) {
+      messageContainerRef.current.scrollTop =
+        messageContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
   async function handleSubmit() {
+    // Add the user's message to the messages state immediately
+    setMessages([...messages, { message: message, sender: "user" }]);
+    console.log(messages);
+    setIsTyping(true);
+
     try {
       const response = await axios.post(
         "https://digitomy.onrender.com/detectIntent",
@@ -25,17 +34,20 @@ const ChatBot = ({ setIsChatOpen, isChatOpen }) => {
           languageCode: "en-US",
         }
       );
-
+      console.log(messages);
+      setIsTyping(false);
       setMessages([
         ...messages,
         { message: message, sender: "user" },
         { message: response.data.message, sender: "bot" },
       ]);
+      console.log(messages);
       console.log("SUCCESSFUL");
 
       setMessage("");
     } catch (error) {
       console.error("ERRORRR:", error);
+      setIsTyping(false);
       // Handle the error here
     }
   }
@@ -57,7 +69,7 @@ const ChatBot = ({ setIsChatOpen, isChatOpen }) => {
             </a>
           </div>
           <div className="chat-body">
-            <div className="message-container">
+            <div className="message-container" ref={messageContainerRef}>
               {messages.map((item, index) => (
                 <div
                   className={`${
@@ -69,6 +81,15 @@ const ChatBot = ({ setIsChatOpen, isChatOpen }) => {
                 </div>
               ))}
             </div>
+            {isTyping && (
+              <div className="bot-message" style={{ width: 40 }}>
+                <div className="bot-typing-animation">
+                  <div className="dot1"></div>
+                  <div className="dot2"></div>
+                  <div className="dot3"></div>
+                </div>
+              </div>
+            )}
           </div>
           <div className="chat-footer">
             <div

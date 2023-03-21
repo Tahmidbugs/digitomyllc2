@@ -125,3 +125,33 @@
     }
     
   
+    .bot-typing-animation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+    }
+    
+    .bot-typing-animation .dot1,
+    .bot-typing-animation .dot2,
+    .bot-typing-animation .dot3 {
+      width: 6px;
+      height: 6px;
+      margin: 0px 3px;
+      background-color: #666;
+      border-radius: 50%;
+      animation: botTyping 1.5s infinite ease-in-out;
+    }
+    
+    @keyframes botTyping {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    

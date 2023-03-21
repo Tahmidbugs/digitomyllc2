@@ -26,6 +26,7 @@ const About = () => {
             width: "60%",
             margin: "auto",
             textAlign: "center",
+            position: "relative",
           }}
         >
           {/* <img
@@ -33,24 +34,20 @@ const About = () => {
             alt="My GIF"
             style={{ width: "25%", height: "45%", position: "absolute" }}
           /> */}
+
           <video
             style={{
-              // borderRadius: 30,
               objectFit: "cover",
-              width: "900px",
-              height: "300px",
-              // transform: hover ? "scale(1.4)" : "scale(1)",
-              transition: "transform 0.3s ease-in-out",
+              width: "100%",
+              height: "20rem",
               opacity: 1,
-              position: "relative",
               borderRadius: 20,
               borderTopLeftRadius: 70,
               borderTopRightRadius: 70,
             }}
-            // controls
             autoPlay
             alt=""
-            className=" fadeIn video"
+            className="fadeIn video"
             loop
             controls={false}
             muted
@@ -62,17 +59,19 @@ const About = () => {
             Your browser does not support the video tag.
           </video>
           <h1
-            className="title changecolor "
+            className="title2 changecolor"
             style={{
               position: "absolute",
-              bottom: 140,
-              left: 50,
+              left: "60%",
+              top: "35%",
+              transform: "translateX(-60%)",
               textAlign: "left",
+              width: 900,
             }}
           >
             Embrace the <br />
             future of mosquito surveillance <br />
-            with Digitomy{" "}
+            with Digitomy
           </h1>
 
           <br />

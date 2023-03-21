@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
+import animationDatas from "../../lotties/click.json";
+import Lottie from "react-lottie";
 
 import emailjs from "emailjs-com";
 const Contact = () => {
@@ -30,27 +32,55 @@ const Contact = () => {
           flexDirection: "row",
           justifyContent: "center",
           marginTop: 40,
+          alignItems: "center",
         }}
       >
         <div
           className="contact__options"
           style={{
-            marginRight: 200,
+            marginRight: 50,
+            marginLeft: 40,
             justifyContent: "center",
           }}
         >
-          <article className="contact__option">
+          <article className="contact__option" style={{ position: "relative" }}>
             <MdOutlineEmail className="contact__option-icon" />
-            <h3>Email</h3>
-            <h4>digitomytech@gmail.com</h4>
+            <h5>Email</h5>
+            <h5>digitomytech@gmail.com</h5>
             <h4>
               <a href="mailto:digitomytech@gmail.com" target="_blank">
-                Send an email
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                  style={{ marginBottom: 20, marginTop: 10 }}
+                >
+                  Send an email
+                </button>
               </a>
             </h4>
           </article>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
+        <div>
+          {animationDatas && (
+            <div
+              style={
+                {
+                  // width: 500,
+                  // height: 400,
+                  //  position: "absolute",
+                  //   top: 70,
+                }
+              }
+              href="mailto:digitomytech@gmail.com"
+            >
+              <Lottie
+                options={{ animationData: animationDatas }}
+                eventListeners={[{}]}
+              />
+            </div>
+          )}
+        </div>
+        <form ref={form} onSubmit={sendEmail} style={{ marginRight: 40 }}>
           <input
             type="text"
             name="name"

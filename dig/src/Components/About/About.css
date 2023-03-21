@@ -69,7 +69,14 @@ img{
     font-size: 3.5rem;
     color: rgb(41, 41, 90);
     font-family: 'Righteous', cursive;
-    
+   
+}
+.title2{
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: rgb(41, 41, 90);
+  font-family: 'Righteous', cursive;
+  text-shadow: #000 2px 0 2px;
 }
 .changecolor{
   transition: color 3s ease-in-out;
@@ -78,19 +85,19 @@ img{
 
 @keyframes color-change {
   0% {
-    color: rgb(200, 152, 245);
+    color: rgb(98, 104, 182);
   }
   25% {
-    color: rgb(186, 115, 236);
+    color: rgb(106, 106, 184);
   }
   50% {
-    color: rgb(119, 164, 241);
+    color: rgb(99, 137, 202);
   }
   75% {
-    color: rgb(102, 159, 228);
+    color: rgb(79, 122, 175);
   }
   100% {
-    color: rgb(166, 166, 249);
+    color: rgb(80, 113, 205);
   }
 }
 .container.clubs__container{

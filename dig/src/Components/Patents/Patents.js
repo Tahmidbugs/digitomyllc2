@@ -76,7 +76,7 @@ const Card = ({ title, description, index }) => {
   return (
     <div
       style={{
-        backgroundColor: hover ? "#C3E0F6" : "#DCDBDC",
+        backgroundColor: hover ? "#C3E0F6" : "#F4F4F4",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

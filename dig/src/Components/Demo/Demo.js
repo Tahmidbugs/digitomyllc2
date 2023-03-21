@@ -145,7 +145,7 @@ const Demo = () => {
             style={{
               margin: "auto",
               textAlign: "center",
-              width: "40%",
+              width: "50rem",
               display: "flex",
               justifyContent: "center",
             }}

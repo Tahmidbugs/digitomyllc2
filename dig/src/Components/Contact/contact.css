@@ -34,7 +34,7 @@
     border-radius: 10px;
     font-size: 16px;
     outline: none;
-    background-color:#DCDBDC ;
+    background-color:#F4F4F4 ;
   }
 
   input::placeholder{
@@ -47,8 +47,8 @@
   
   button.btn {
     padding: 10px 20px;
-    background-color: #707070;
-    color:rgb(212, 212, 206);
+    background-color: #7eaac9;
+    color:rgb(27, 27, 25);
         border-radius: 5px;
     border: none;
     font-size: 16px;
@@ -57,12 +57,12 @@
   }
   
   button.btn:hover {
-    background-color: #5e5e5e;
+    background-color: #627fb0;
   }
 
 
   li:hover{
-    background-color:rgb(92,138,174);
+    background-color:rgb(216, 217, 218);
     border-radius: 20px;
     padding:10;
   }

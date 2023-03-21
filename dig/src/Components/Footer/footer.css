@@ -1,5 +1,5 @@
 .footer {
-    background-color: #DCDBDC;
+    background-color: #F4F4F4;
     /* background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png"); */
     /* position: fixed; */
     bottom: 0;
@@ -18,7 +18,7 @@
   }
   
   .subscribeTitle {
-    color: #5b5b5b;
+    color: #827e7e;
     font-size: 18px;
     margin-top: 10px;
     margin-right: 20px;
@@ -36,11 +36,11 @@
     width: 300px;
     height: 30px;
     margin-top: 20px;
-    color:#5e5d5d;
+    color:#807c7c;
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background-color: #b8b3b3;
+    background-color: #F4F4F4;
     box-shadow: 1px 1px 2px #333;
     text-align: center;
     margin-right: 10px;
