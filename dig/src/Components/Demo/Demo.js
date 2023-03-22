@@ -82,7 +82,15 @@ const Demo = () => {
 
   return (
     <>
-      <div style={{ marginTop: 150, height: "400px" }} id="demo">
+      <div
+        style={{
+          marginTop: 150,
+          height: "400px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+        id="demo"
+      >
         <h5
           style={{ fontSize: 14, fontWeight: 800 }}
           className="title changecolor"
@@ -95,6 +103,10 @@ const Demo = () => {
             flexDirection: "row",
             marginTop: 100,
             marginBottom: 200,
+            marginLeft: "auto",
+            marginRight: "auto",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <div

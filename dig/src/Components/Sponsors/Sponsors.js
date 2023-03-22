@@ -36,6 +36,8 @@ const Sponsors = () => {
             flexDirection: "row",
             justifyContent: "center",
             marginTop: 0,
+            marginLeft: "auto",
+            marginRight: "auto",
           }}
         >
           <img

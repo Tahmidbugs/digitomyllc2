@@ -18,28 +18,26 @@ const About = () => {
           display: "flex",
           flexDirection: "row",
           marginTop: "200px",
+          height: "30rem",
         }}
-        className="bodyPart"
+        // className="bodyPart"
       >
         <div
           style={{
-            width: "60%",
-            margin: "auto",
-            textAlign: "center",
             position: "relative",
+            width: "70%",
+            height: "20rem",
+            marginLeft: 20,
+            marginRight: 20,
+            borderRadius: "20px",
+            // overflow: "hidden",
           }}
         >
-          {/* <img
-            src={MySVG}
-            alt="My GIF"
-            style={{ width: "25%", height: "45%", position: "absolute" }}
-          /> */}
-
           <video
             style={{
               objectFit: "cover",
               width: "100%",
-              height: "20rem",
+              height: "100%",
               opacity: 1,
               borderRadius: 20,
               borderTopLeftRadius: 70,
@@ -62,11 +60,12 @@ const About = () => {
             className="title2 changecolor"
             style={{
               position: "absolute",
-              left: "60%",
-              top: "35%",
-              transform: "translateX(-60%)",
-              textAlign: "left",
-              width: 900,
+              // marginLeft: "50%",
+              // top: "55%",
+              // transform: "translateX(-50%)",
+              // textAlign: "left",
+
+              // width: "56.25rem",
             }}
           >
             Embrace the <br />
@@ -82,11 +81,14 @@ const About = () => {
           <br />
           <Button />
         </div>
-        <div className="about__me">
+        <div className="about__me" style={{ width: "30%", flexWrap: "wrap" }}>
           <div className="about__me-image">
             <h3
               className="info fadeIn"
-              style={{ marginTop: 90, textAlign: "left" }}
+              style={{
+                marginTop: 90,
+                textAlign: "left",
+              }}
             >
               At Digitomy, we believe in the power of innovation to
               revolutionize the way we approach mosquito surveillance. Based at
