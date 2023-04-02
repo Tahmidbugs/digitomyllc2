@@ -1,8 +1,8 @@
 .chat-container {
   background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
     background-color: #C3DFF6;
-    width: 400px;
-    height: 500px;
+    width: 25rem;
+    height: 28rem;
     position: fixed;
     bottom: 40px;
     right: 20px;

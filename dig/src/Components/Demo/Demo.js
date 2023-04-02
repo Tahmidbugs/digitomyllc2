@@ -168,7 +168,7 @@ const Demo = () => {
               style={{
                 borderRadius: 30,
                 width: "70%",
-                transform: hover ? "scale(1.4)" : "scale(1)",
+                transform: hover ? "scale(1.2)" : "scale(1)",
                 transition: "transform 0.3s ease-in-out",
               }}
               controls

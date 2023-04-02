@@ -22,30 +22,6 @@ function App() {
   const [isThemeSelectorOpen, setIsThemeSelectorOpen] = React.useState(false);
   return (
     <div className="App">
-      <AnimatedCursor
-        innerSize={20}
-        outerSize={50}
-        color="92,138,174"
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={3}
-        clickables={[
-          "a",
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          "label[for]",
-          "select",
-          "textarea",
-          "button",
-          "video",
-          "img",
-          "Lottie",
-          ".link",
-        ]}
-      />
       <Navbar />
       <About />
 

@@ -7,16 +7,19 @@ const Patents = () => {
       title: "US Patent 10,963,742",
       description:
         "Sriram Chellappan, Pratool Bharti, Mona Minakshi, Willie McClinton and Jamshidbek Mirzakhalov, “Leveraging smart-phone cameras and image processing techniques to classify mosquito genus and species”",
+      link: "https://patents.google.com/patent/US20200143202A1/en?q=(sriram+chellepan)&oq=sriram+chellepan",
     },
     {
       title: "US Patent 11,048,928",
       description:
         "Sriram Chellappan, Mona Minakshi, Jamshidbek Mirzakhalov, Sherzod Kariev and Willie McClinton, “Systems and methods of entomology classification based on extracted anatomies”",
+      link: "https://patents.google.com/patent/US11048928B1/en?q=(sriram+chellepan)&oq=sriram+chellepan",
     },
     {
       title: "Application US17/496,563 (Pending)",
       description:
         "Sriram Chellappan, Stephen Edward Saddow, Ryan Marc Carney, Brandon Wolfram and Mark Weston, “Smart mosquito trap for mosquito classification”",
+      link: "https://patents.google.com/patent/WO2022076702A1/en?q=(sriram+chellepan)&oq=sriram+chellepan",
     },
   ];
   return (
@@ -59,6 +62,7 @@ const Patents = () => {
                 title={item.title}
                 description={item.description}
                 index={index}
+                link={item.link}
               />
             );
           })}
@@ -70,7 +74,7 @@ const Patents = () => {
 
 export default Patents;
 
-const Card = ({ title, description, index }) => {
+const Card = ({ title, description, index, link }) => {
   const [hover, setHover] = React.useState(false);
   console.log(title, index);
   return (
@@ -91,6 +95,7 @@ const Card = ({ title, description, index }) => {
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => (window.location.href = link)}
     >
       <div
         style={{

@@ -3,6 +3,7 @@ import nasa from "../../assets/nasa.png";
 import nsf from "../../assets/nsf.png";
 import usf from "../../assets/usf.png";
 import cdc from "../../assets/cdc.png";
+import "./sponsors.css";
 
 const NSFcont =
   "NSF's support has helped to fund research and development of the mosquito trap machine, bringing us one step closer to our goal of reducing mosquito-borne illnesses around the world";
@@ -19,7 +20,13 @@ const Sponsors = () => {
   const [contribution, setContribution] = React.useState(defaultcont);
   return (
     <>
-      <div style={{ marginTop: 190, marginBottom: 80 }} id="sponsors">
+      <div
+        style={{
+          marginTop: 190,
+          marginBottom: 80,
+        }}
+        id="sponsors"
+      >
         <div style={{ textAlign: "center" }}>
           <h5
             style={{ fontSize: 15, fontWeight: "700" }}
@@ -36,24 +43,17 @@ const Sponsors = () => {
             flexDirection: "row",
             justifyContent: "center",
             marginTop: 0,
-            marginLeft: "auto",
-            marginRight: "auto",
+            marginLeft: 100,
+            marginRight: 100,
           }}
         >
           <img
             src={nasa}
             alt="NASA logo"
-            style={{
-              width: 400,
-              height: 250,
-              margin: 30,
-              cursor: "pointer",
-              marginRight: 0,
-              transition: "transform 0.3s ease-in-out",
-            }}
+            className="nasa"
             onMouseEnter={(e) => {
               setContribution(NASAcont);
-              e.currentTarget.style.transform = "scale(1.4)";
+              e.currentTarget.style.transform = "scale(1.2)";
             }}
             onMouseLeave={(e) => {
               setContribution(defaultcont);
@@ -64,17 +64,10 @@ const Sponsors = () => {
           <img
             src={nsf}
             alt="NSF logo"
-            style={{
-              width: 280,
-              height: 250,
-              margin: 30,
-              cursor: "pointer",
-              marginRight: 50,
-              transition: "transform 0.3s ease-in-out",
-            }}
+            className="nsf"
             onMouseEnter={(e) => {
               setContribution(NSFcont);
-              e.currentTarget.style.transform = "scale(1.4)";
+              e.currentTarget.style.transform = "scale(1.2)";
             }}
             onMouseLeave={(e) => {
               setContribution(defaultcont);
@@ -85,17 +78,10 @@ const Sponsors = () => {
           <img
             src={usf}
             alt="USF logo"
-            style={{
-              width: 270,
-              height: 250,
-              margin: 30,
-              cursor: "pointer",
-              marginRight: 80,
-              transition: "transform 0.3s ease-in-out",
-            }}
+            className="usf"
             onMouseEnter={(e) => {
               setContribution(USFcont);
-              e.currentTarget.style.transform = "scale(1.4)";
+              e.currentTarget.style.transform = "scale(1.2)";
             }}
             onMouseLeave={(e) => {
               setContribution(defaultcont);
@@ -106,16 +92,10 @@ const Sponsors = () => {
           <img
             src={cdc}
             alt="CDC logo"
-            style={{
-              width: 280,
-              height: 280,
-              margin: 30,
-              cursor: "pointer",
-              transition: "transform 0.3s ease-in-out",
-            }}
+            className="cdc"
             onMouseEnter={(e) => {
               setContribution(CDCcont);
-              e.currentTarget.style.transform = "scale(1.4)";
+              e.currentTarget.style.transform = "scale(1.2)";
             }}
             onMouseLeave={(e) => {
               setContribution(defaultcont);
@@ -136,7 +116,7 @@ const Sponsors = () => {
             className="changeColor"
             // style={{ maxWidth: "80%", textAlign: "center" }}
           >
-            {contribution}
+            "{contribution}"
           </h5>
         </div>
       </div>

@@ -25,10 +25,10 @@ const About = () => {
         <div
           style={{
             position: "relative",
-            width: "70%",
-            height: "20rem",
+            width: "60%",
+            height: "18rem",
             marginLeft: 20,
-            marginRight: 20,
+            marginRight: 0,
             borderRadius: "20px",
             // overflow: "hidden",
           }}
@@ -58,36 +58,32 @@ const About = () => {
           </video>
           <h1
             className="title2 changecolor"
-            style={{
-              position: "absolute",
-              // marginLeft: "50%",
-              // top: "55%",
-              // transform: "translateX(-50%)",
-              // textAlign: "left",
-
-              // width: "56.25rem",
-            }}
+            style={
+              {
+                // position: "absolute",
+                // marginLeft: "50%",
+                // top: "55%",
+                // transform: "translateX(-50%)",
+                // textAlign: "left",
+                // width: "56.25rem",
+              }
+            }
           >
             Embrace the <br />
             future of mosquito surveillance <br />
             with Digitomy
           </h1>
 
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
           <Button />
         </div>
-        <div className="about__me" style={{ width: "30%", flexWrap: "wrap" }}>
-          <div className="about__me-image">
+        <div className="infowrap" style={{ width: "40%", flexWrap: "wrap" }}>
+          <div className="infowrapper">
             <h3
               className="info fadeIn"
               style={{
                 marginTop: 90,
                 textAlign: "left",
+                // maxHeight: 230,
               }}
             >
               At Digitomy, we believe in the power of innovation to
