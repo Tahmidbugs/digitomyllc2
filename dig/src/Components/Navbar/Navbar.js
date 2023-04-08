@@ -16,7 +16,7 @@ const Navbar = () => {
           class="container-fluid"
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             alignItems: "center",
           }}
         >
@@ -27,7 +27,7 @@ const Navbar = () => {
               color: "black",
               display: "flex",
               justifyContent: "space-around",
-              minWidth: "40%",
+              // minWidth: "30%",
             }}
           >
             <ul class="navbar-nav changecolor">
@@ -64,48 +64,10 @@ const Navbar = () => {
                   Team
                 </Link>
               </li>
-
-              {/* <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                style={{ color: "black" }}
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Another link
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    A third link
-                  </a>
-                </li>
-              </ul>
-            </li> */}
             </ul>
           </div>
           <a class="navbar-brand" href="#" style={{ marginLeft: 10 }}>
-            <img
-              src={logoURL}
-              // onMouseEnter={() =>
-              //   setlogoURL(`${require("../../assets/logo1.png")}`)
-              // }
-              // onMouseLeave={() =>
-              //   setlogoURL(`${require("../../assets/logo.png")}`)
-              // }
-              className="logo"
-            />
+            <img src={logoURL} className="logo" />
           </a>
           <button
             class="navbar-toggler"
@@ -116,13 +78,12 @@ const Navbar = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            // class="collapse navbar-collapse"
             id="collapsibleNavbar"
             style={{
               color: "black",
               display: "flex",
               justifyContent: "center",
-              minWidth: "40%",
+              // minWidth: "30%",
             }}
           >
             <ul class="navbar-nav changecolor">
@@ -162,35 +123,6 @@ const Navbar = () => {
                   Contacts
                 </Link>
               </li>
-
-              {/* <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                style={{ color: "black" }}
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Another link
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    A third link
-                  </a>
-                </li>
-              </ul>
-            </li> */}
             </ul>
           </div>
         </div>

@@ -16,6 +16,56 @@
   animation: bounce 2s infinite;
 }
 
+.glow-on-hover {
+  text-align: center;
+  padding: 12px 24px;
+  border: 2px solid rgb(92,138,174);
+  border-radius: 50px;
+  transition: all 0.3s ease-out;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: rgb(92,138,174);
+  /* position:absolute; */
+  margin-left:auto;
+  margin-right:auto
+}
+
+.glow-on-hover:hover {
+  background-color:rgb(92,138,174);
+  color: #04a5ff;
+}
+
+.glow-on-hover:focus {
+  outline: none;
+  box-shadow: 0 0 10px #04a5ff;
+}
+
+/* Futuristic style */
+.glow-on-hover {
+  /* position: relative; */
+  /* z-index: 9; */
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1)
+  );
+  /* background-size: 400%; */
+}
+
+.glow-on-hover:hover {
+  color: #272727;
+  background-position: 100%;
+}
+
+.glow-on-hover:focus {
+  color: #fff;
+  background-position: 100%;
+}
+
 @keyframes bounce {
   0% {
     transform: translate3d(0, 0, 0);
@@ -247,63 +297,3 @@ a{
 
 
  }
-
- .glow-on-hover {
-  display: inline-block;
-  text-align: center;
-  padding: 12px 24px;
-  border: 2px solid rgb(92,138,174);
-  border-radius: 50px;
-  transition: all 0.3s ease-out;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  background-color: rgb(92,138,174);
-}
-
-.glow-on-hover:hover {
-  background-color:rgb(92,138,174);
-  color: #04a5ff;
-}
-
-.glow-on-hover:focus {
-  outline: none;
-  box-shadow: 0 0 10px #04a5ff;
-}
-
-/* Futuristic style */
-.glow-on-hover {
-  position: relative;
-  /* z-index: 9; */
-  overflow: hidden;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.1)
-  );
-  background-size: 400%;
-}
-
-.glow-on-hover:hover {
-  color: #272727;
-  background-position: 100%;
-}
-
-.glow-on-hover:focus {
-  color: #fff;
-  background-position: 100%;
-}
-
-  
-  
-
-
-
-  
-   
-    
-    
-    
-    

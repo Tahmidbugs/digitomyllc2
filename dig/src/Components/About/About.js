@@ -4,6 +4,7 @@ import Machine from "../../assets/machine.png";
 import Machine2 from "../../assets/machine2.jpeg";
 import MySVG from "./my.gif";
 import { Link, animateScroll } from "react-scroll";
+import { BsArrowUpRight, BsArrowDownLeft } from "react-icons/bs";
 
 const About = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -13,16 +14,17 @@ const About = () => {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          marginTop: "200px",
-          height: "30rem",
-        }}
-        // className="bodyPart"
-      >
+      <div>
         <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            marginTop: "200px",
+            height: "35rem",
+          }}
+          // className="bodyPart"
+        >
+          {/* <div
           style={{
             position: "relative",
             width: "60%",
@@ -32,7 +34,7 @@ const About = () => {
             borderRadius: "20px",
             // overflow: "hidden",
           }}
-        >
+        > */}
           <video
             style={{
               objectFit: "cover",
@@ -56,7 +58,37 @@ const About = () => {
             />
             Your browser does not support the video tag.
           </video>
-          <h1
+          <div
+            style={{
+              position: "absolute",
+              top: "55%",
+              transform: "translateX(2%)",
+            }}
+          >
+            <h1
+              className="title2 "
+              style={{
+                color: "white",
+                // marginLeft: "50%",
+                // top: "55%",
+                // transform: "translateX(-50%)",
+                // textAlign: "left",
+                // width: "56.25rem",
+              }}
+            >
+              Embrace the <br />
+              future of mosquito surveillance <br />
+              with{" "}
+              <span className="changecolor">
+                Digitomy <br />
+              </span>
+            </h1>
+            <Button />
+          </div>
+
+          {/* </div> */}
+
+          {/* <h1
             className="title2 changecolor"
             style={
               {
@@ -78,12 +110,39 @@ const About = () => {
         </div>
         <div className="infowrap" style={{ width: "40%", flexWrap: "wrap" }}>
           <div className="infowrapper">
+            
+            </div>*/}
+          {/* </div> */}
+        </div>
+        <div
+          style={{
+            fontSize: 12,
+            marginTop: 30,
+            display: "flex",
+            color: "black",
+            width: "70%",
+            borderRadius: 20,
+            padding: 20,
+            flexDirection: "column",
+            marginLeft: "auto",
+            marginRight: "auto",
+            alignItems: "center",
+            justifyContent: "center",
+            // backgroundColor: "#537C9C",
+          }}
+        >
+          <h2 style={{ fontFamily: "Righteous", position: "relative" }}>
+            The Buzz about Digitomy: Revolutionizing Mosquito Surveillance with
+            Innovative Technology
+          </h2>
+
+          <div style={{ display: "flex" }}>
             <h3
               className="info fadeIn"
               style={{
-                marginTop: 90,
                 textAlign: "left",
-                // maxHeight: 230,
+                // width: "50%",
+                marginTop: 50,
               }}
             >
               At Digitomy, we believe in the power of innovation to
@@ -95,7 +154,7 @@ const About = () => {
 
             <h3
               className="info fadeIn"
-              style={{ marginTop: 30, textAlign: "left" }}
+              style={{ marginTop: 50, textAlign: "left", marginLeft: 20 }}
             >
               Our patented algorithms and smart mosquito trap are designed to
               provide unparalleled accuracy and efficiency in monitoring the
