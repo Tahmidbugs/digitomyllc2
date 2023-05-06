@@ -158,9 +158,8 @@ const About = () => {
             >
               Our patented algorithms and smart mosquito trap are designed to
               provide unparalleled accuracy and efficiency in monitoring the
-              presence of mosquitoes, helping to prevent the spread of diseases
-              they may carry. Join us in our mission to create a healthier,
-              safer world through technology.
+              presence of vector mosquitoes. Join us in our mission to create a
+              healthier, safer world through technology.
             </h3>
           </div>
         </div>

@@ -117,7 +117,7 @@ function App() {
           ></div>
         </div>
       )}
-      {animationDatas && (
+      {/* {animationDatas && (
         <a>
           <div
             style={{
@@ -147,7 +147,7 @@ function App() {
       )}
       {isChatOpen && (
         <ChatBot setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen} />
-      )}
+      )} */}
     </div>
   );
 }

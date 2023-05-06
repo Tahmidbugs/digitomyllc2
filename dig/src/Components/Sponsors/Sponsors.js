@@ -6,16 +6,16 @@ import cdc from "../../assets/cdc.png";
 import "./sponsors.css";
 
 const NSFcont =
-  "NSF's support has helped to fund research and development of the mosquito trap machine, bringing us one step closer to our goal of reducing mosquito-borne illnesses around the world";
+  "NSF's support has helped to fund research and development of the mosquito trap, bringing us one step closer to our goal of reducing mosquito-borne illnesses around the world";
 const USFcont =
-  "USF's research facilities and expertise in environmental science, entomology, and computer science have contributed to the development and refinement of the mosquito trap machine.";
+  "USF's research facilities and expertise in environmental science, entomology, and computer science have contributed to the development and refinement of the mosquito trap.";
 const CDCcont =
-  "The CDC's guidance and access to disease data have informed the design and deployment of the mosquito trap machine to help reduce the spread of mosquito-borne illnesses.";
+  "The CDC's guidance and access to disease data have informed the design and deployment of the mosquito trap to help reduce the spread of mosquito-borne illnesses.";
 const NASAcont =
-  "NASA's technical expertise and funding have supported the development of advanced sensors and algorithms for the mosquito trap machine";
+  "NASA's technical expertise and funding have supported the development of advanced sensors and algorithms for the mosquito trap";
 
 const defaultcont =
-  "We are incredibly grateful for the contributions of our sponsors and partners. Thanks to their generous support, we have been able to develop and refine our mosquito trap machine,\n bringing us one step closer to our goal of reducing mosquito-borne illnesses around the world";
+  "We are incredibly grateful for the contributions of our sponsors and partners. Thanks to their generous support, we have been able to develop and refine our mosquito trap,\n bringing us one step closer to our goal of reducing mosquito-borne illnesses around the world";
 const Sponsors = () => {
   const [contribution, setContribution] = React.useState(defaultcont);
   return (
