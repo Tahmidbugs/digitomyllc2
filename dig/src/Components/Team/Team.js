@@ -23,6 +23,9 @@ import otabekb from "../../assets/otabekb.png";
 import tahmid from "../../assets/tahmid.jpeg";
 import tahmidb from "../../assets/tahmidb.jpeg";
 
+import ramya from "../../assets/ramya.jpg";
+import ramyab from "../../assets/ramyab.jpg";
+
 const Team = () => {
   const members = [
     {
@@ -96,6 +99,15 @@ const Team = () => {
       profilePicture: tahmid,
       profilePicture2: tahmidb,
       portfolio: "https://www.linkedin.com/in/tahmid-ahmed-72a883212/",
+    },
+    {
+      name: "Ramya Thiagarjan",
+      position: "Faculty at USF",
+      positionDescription:
+        "Sr. Statistical Data Analyst at the University of South Florida.",
+      profilePicture: ramya,
+      profilePicture2: ramyab,
+      portfolio: "https://www.linkedin.com/in/ramya-thiagarajan-42600b9/",
     },
   ];
   return (
