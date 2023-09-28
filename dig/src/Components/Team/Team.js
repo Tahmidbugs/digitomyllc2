@@ -47,6 +47,15 @@ const Team = () => {
       portfolio: "https://www.linkedin.com/in/ryancarney/",
     },
     {
+      name: "Ramya Thiagarjan",
+      position: "Faculty at USF",
+      positionDescription:
+        "Sr. Statistical Data Analyst at the University of South Florida.",
+      profilePicture: ramya,
+      profilePicture2: ramyab,
+      portfolio: "https://www.linkedin.com/in/ramya-thiagarajan-42600b9/",
+    },
+    {
       name: "Brandon Wolfram",
       position: "Hardware Design Engineer",
       positionDescription:
@@ -99,15 +108,6 @@ const Team = () => {
       profilePicture: tahmid,
       profilePicture2: tahmidb,
       portfolio: "https://www.linkedin.com/in/tahmid-ahmed-72a883212/",
-    },
-    {
-      name: "Ramya Thiagarjan",
-      position: "Faculty at USF",
-      positionDescription:
-        "Sr. Statistical Data Analyst at the University of South Florida.",
-      profilePicture: ramya,
-      profilePicture2: ramyab,
-      portfolio: "https://www.linkedin.com/in/ramya-thiagarajan-42600b9/",
     },
   ];
   return (
